@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TeenInbox — AI-powered threat detection that monitors every app on your teen's phone, completely offline. Real-time alerts to parents.">
+    <title>TeenInbox — Keep Your Teen Safe Online</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cinematic Background -->
+    <div id="bg-canvas">
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+        <div class="aurora aurora-3"></div>
+        <div class="noise"></div>
+    </div>
+
+    <!-- ============================================================
+     NAV
+============================================================ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <i class="fa-solid fa-shield-halved nav-logo-icon"></i>
+                <span>TeenInbox</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+     HERO SECTION
+============================================================ -->
+    <section id="hero">
+        <div class="hero-inner">
+
+            <!-- Top eyebrow -->
+            <div class="hero-eyebrow">
+                <span class="live-dot"></span>
+                <span>AI-Powered · 100% Offline · Every App</span>
+            </div>
+
+            <!-- Headline: the carousel IS the noun in the sentence -->
+            <h1 class="hero-title">
+                Right now, your teen<br>is talking to...
+            </h1>
+
+            <!-- Animated Persona Carousel -->
+            <div class="persona-carousel" id="persona-carousel" aria-live="polite">
+                <div class="persona-card active" data-persona="0">
+                    <div class="persona-avatar" style="background: linear-gradient(135deg, #34d399, #059669)">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <div class="persona-info">
+                        <div class="persona-label safe-label">✓ Verified Safe</div>
+                        <div class="persona-name">A School Friend</div>
+                        <div class="persona-msg">"Did you finish the homework? 😅"</div>
+                    </div>
+                </div>
+                <div class="persona-card" data-persona="1">
+                    <div class="persona-avatar" style="background: linear-gradient(135deg, #f59e0b, #b45309)">
+                        <i class="fa-solid fa-user-secret"></i>
+                    </div>
+                    <div class="persona-info">
+                        <div class="persona-label warn-label">⚠ Unknown Account</div>
+                        <div class="persona-name">"classmate2009"</div>
+                        <div class="persona-msg">"I go to your school too, trust me…"</div>
+                    </div>
+                </div>
+                <div class="persona-card" data-persona="2">
+                    <div class="persona-avatar" style="background: linear-gradient(135deg, #ef4444, #7f1d1d)">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="persona-info">
+                        <div class="persona-label danger-label">🚨 Threat Detected</div>
+                        <div class="persona-name">A Blackmailer</div>
+                        <div class="persona-msg">"Send photos or I'll tell everyone."</div>
+                    </div>
+                </div>
+                <div class="persona-card" data-persona="3">
+                    <div class="persona-avatar" style="background: linear-gradient(135deg, #a855f7, #4c1d95)">
+                        <i class="fa-solid fa-ban"></i>
+                    </div>
+                    <div class="persona-info">
+                        <div class="persona-label danger-label">🔞 Content Blocked</div>
+                        <div class="persona-name">A Predator</div>
+                        <div class="persona-msg">"Here's a photo just for you 📷"</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dots -->
+            <div class="persona-dots" id="persona-dots">
+                <div class="persona-dot active" data-dot="0"></div>
+                <div class="persona-dot" data-dot="1"></div>
+                <div class="persona-dot" data-dot="2"></div>
+                <div class="persona-dot" data-dot="3"></div>
+            </div>
+
+            <!-- Short, serious statement -->
+            <p class="hero-sub">
+                Most threats start as normal conversations.<br>
+                <strong>TeenInbox detects them. We never spy — we only alert when something is wrong.</strong>
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero-ctas">
+                <a href="#waitlist" class="btn-primary-main pulse-cta">
+                    <i class="fa-solid fa-shield-check"></i>
+                    Protect My Teen
+                </a>
+                <a href="#demo" class="btn-ghost">
+                    <i class="fa-regular fa-circle-play"></i>
+                    See It In Action
+                </a>
+            </div>
+
+            <!-- Trust pills -->
+            <div class="hero-trust">
+                <div class="trust-item"><i class="fa-solid fa-lock"></i> 100% Offline</div>
+                <div class="trust-item"><i class="fa-solid fa-eye-slash"></i> No Spying</div>
+                <div class="trust-item"><i class="fa-solid fa-bolt"></i> Instant Alerts</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+     CINEMATIC DEMO SECTION
+============================================================ -->
+    <section id="demo">
+        <div class="demo-inner">
+            <div class="section-eyebrow">
+                <span class="badge-dot danger"></span>
+                <span>Live Threat Detection Demo</span>
+            </div>
+            <h2 class="section-title">
+                AI That Sees What Parents Can't
+            </h2>
+            <p class="section-sub">
+                Watch TeenInbox intercept real threats in real-time — across every app.
+            </p>
+
+            <div class="demo-stage">
+                <!-- Teen Phone -->
+                <div class="device-wrapper teen-device-wrapper">
+                    <div class="device-label">Teen's Phone</div>
+                    <div class="device-phone" id="teen-phone">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <!-- Dynamic App Scene renders here via JS -->
+                            <div id="app-scene"></div>
+                            <!-- TeenInbox overlay (always on top) -->
+                            <div class="teeninbox-overlay" id="ti-overlay">
+                                <div class="ti-bar">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>TeenInbox Active</span>
+                                    <span class="ti-status-dot"></span>
+                                </div>
+                            </div>
+                            <!-- Alert flash that fires on detection -->
+                            <div class="detection-flash" id="detection-flash"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connection Line with signal pulses -->
+                <div class="connection-line" id="connection-line">
+                    <div class="signal-label">Encrypted Alert</div>
+                    <div class="signal-pulse sp1"></div>
+                    <div class="signal-pulse sp2"></div>
+                    <div class="signal-pulse sp3"></div>
+                    <svg viewBox="0 0 200 80" preserveAspectRatio="none">
+                        <path id="conn-path" d="M0 40 C50 40, 150 40, 200 40" stroke="url(#lineGrad)" stroke-width="2"
+                            fill="none" stroke-dasharray="6 4" />
+                        <defs>
+                            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#ef4444" />
+                                <stop offset="100%" stop-color="#3b82f6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Parent Phone -->
+                <div class="device-wrapper parent-device-wrapper">
+                    <div class="device-label">Parent's Dashboard</div>
+                    <div class="device-phone parent-phone" id="parent-phone">
+                        <div class="device-notch"></div>
+                        <div class="device-screen parent-screen">
+                            <div class="parent-app-header">
+                                <i class="fa-solid fa-shield-halved gradient-icon"></i>
+                                <div>
+                                    <div class="parent-app-name">TeenInbox</div>
+                                    <div class="parent-app-sub">Parent Dashboard</div>
+                                </div>
+                                <div class="parent-teen-status">Teen Online</div>
+                            </div>
+                            <div class="parent-status-bar">
+                                <div class="parent-status-item safe" id="parent-status-default">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>All clear — No threats</span>
+                                </div>
+                            </div>
+                            <div id="parent-alerts-list">
+                                <!-- Alerts injected by JS -->
+                            </div>
+                            <div class="parent-stats">
+                                <div class="stat-box">
+                                    <div class="stat-num violet" id="stat-blocked">0</div>
+                                    <div class="stat-label">Blocked</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-num green" id="stat-safe">100%</div>
+                                    <div class="stat-label">Safe</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-num violet" id="stat-apps">8</div>
+                                    <div class="stat-label">Apps</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario selector -->
+            <div class="scenario-nav">
+                <button class="scenario-btn active" data-scenario="0" id="btn-s0">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <span>Blackmail Message</span>
+                </button>
+                <button class="scenario-btn" data-scenario="1" id="btn-s1">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Explicit Image</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     APPS SUPPORT SECTION
+============================================================ -->
+    <section id="apps">
+        <div class="apps-inner">
+            <div class="section-eyebrow">
+                <span class="badge-dot blue"></span>
+                <span>Universal Coverage</span>
+            </div>
+            <h2 class="section-title">Works On Every App</h2>
+            <p class="section-sub">TeenInbox runs as a silent system overlay — monitoring every app without them even
+                knowing.</p>
+
+            <div class="ticker-wrap">
+                <div class="ticker-fade-left"></div>
+                <div class="ticker-fade-right"></div>
+                <div class="ticker-track">
+                    <div class="ticker-set" id="ticker-a">
+                        <div class="app-chip"><i class="fa-brands fa-whatsapp" style="color:#25d366"></i> WhatsApp</div>
+                        <div class="app-chip"><i class="fa-brands fa-instagram" style="color:#e1306c"></i> Instagram
+                        </div>
+                        <div class="app-chip"><i class="fa-brands fa-snapchat"
+                                style="color:#fffc00; filter: drop-shadow(0 0 6px #fffc00aa)"></i> Snapchat</div>
+                        <div class="app-chip"><i class="fa-brands fa-youtube" style="color:#ff0000"></i> YouTube</div>
+                        <div class="app-chip"><i class="fa-brands fa-tiktok"></i> TikTok</div>
+                        <div class="app-chip"><i class="fa-brands fa-telegram" style="color:#26a5e4"></i> Telegram</div>
+                        <div class="app-chip"><i class="fa-regular fa-comment-dots" style="color:#7289da"></i> Discord
+                        </div>
+                        <div class="app-chip"><i class="fa-brands fa-facebook-messenger" style="color:#0084ff"></i>
+                            Messenger</div>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="ticker-set" id="ticker-b" aria-hidden="true">
+                        <div class="app-chip"><i class="fa-brands fa-whatsapp" style="color:#25d366"></i> WhatsApp</div>
+                        <div class="app-chip"><i class="fa-brands fa-instagram" style="color:#e1306c"></i> Instagram
+                        </div>
+                        <div class="app-chip"><i class="fa-brands fa-snapchat"
+                                style="color:#fffc00; filter: drop-shadow(0 0 6px #fffc00aa)"></i> Snapchat</div>
+                        <div class="app-chip"><i class="fa-brands fa-youtube" style="color:#ff0000"></i> YouTube</div>
+                        <div class="app-chip"><i class="fa-brands fa-tiktok"></i> TikTok</div>
+                        <div class="app-chip"><i class="fa-brands fa-telegram" style="color:#26a5e4"></i> Telegram</div>
+                        <div class="app-chip"><i class="fa-regular fa-comment-dots" style="color:#7289da"></i> Discord
+                        </div>
+                        <div class="app-chip"><i class="fa-brands fa-facebook-messenger" style="color:#0084ff"></i>
+                            Messenger</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     FEATURES SECTION
+============================================================ -->
+    <section id="features">
+        <div class="features-inner">
+            <div class="section-eyebrow">
+                <span class="badge-dot purple"></span>
+                <span>Everything You Need</span>
+            </div>
+            <h2 class="section-title">Built for Peace of Mind</h2>
+            <div class="features-grid">
+                <div class="feature-card fc-highlight">
+                    <div class="fc-icon"><i class="fa-solid fa-wifi-slash"></i></div>
+                    <h3>100% Offline</h3>
+                    <p>No internet needed. AI runs entirely on the device. Your teen's data stays on their phone —
+                        always.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>AI Threat Detection</h3>
+                    <p>Detects blackmail, grooming, sexting, and explicit content in both messages and images.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Instant Alerts</h3>
+                    <p>The moment a threat is detected, you get an alert on your Parent Dashboard — even if the content
+                        gets deleted.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>System-Level Overlay</h3>
+                    <p>Works on top of every app: WhatsApp, Snapchat, Instagram, TikTok, games — all of them, invisibly.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-icon"><i class="fa-solid fa-eye-slash"></i></div>
+                    <h3>Uninstall Protection</h3>
+                    <p>Cannot be uninstalled without parents permission.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="fc-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Parent Dashboard</h3>
+                    <p>A clean, beautiful dashboard showing every app, every flag, every alert — with full conversation
+                        screenshots.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     WAITLIST SECTION
+============================================================ -->
+    <section id="waitlist">
+        <div class="waitlist-inner">
+            <div class="section-eyebrow">
+                <span class="badge-dot green"></span>
+                <span>Early Access</span>
+            </div>
+            <h2 class="section-title">Be First to Protect Your Teen</h2>
+            <p class="section-sub">Join thousands of parents on the waitlist. We'll notify you the moment TeenInbox
+                launches.</p>
+
+            <div class="waitlist-card">
+                <div id="waitlist-form-wrap">
+                    <form id="waitlist-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="wl-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                                <input type="email" id="wl-email" placeholder="parent@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="wl-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="wl-phone" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-mobile-screen"></i> Your Teen's Phone</label>
+                            <div class="os-toggle">
+                                <input type="radio" name="os" id="os-ios" value="iOS" checked>
+                                <label for="os-ios" class="os-opt">
+                                    <i class="fa-brands fa-apple fs-4"></i>
+                                    <span>iOS</span>
+                                </label>
+                                <input type="radio" name="os" id="os-android" value="Android">
+                                <label for="os-android" class="os-opt">
+                                    <i class="fa-brands fa-android fs-4"></i>
+                                    <span>Android</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary-main btn-submit-main">
+                            <i class="fa-solid fa-shield-check"></i>
+                            Secure My Spot — It's Free
+                        </button>
+                        <p class="form-disclaimer">No spam. No credit card. Just an alert when we launch.</p>
+                    </form>
+                </div>
+                <div id="waitlist-success" class="d-none">
+                    <div class="success-animation">
+                        <div class="success-ring"></div>
+                        <i class="fa-solid fa-shield-check success-icon-main"></i>
+                    </div>
+                    <h3>You're Protected!</h3>
+                    <p>We've got you on the list. You'll be the first to know when TeenInbox launches.</p>
+                </div>
+            </div>
+
+            <!-- Contact Options -->
+            <div class="contact-strip">
+                <p>Have questions? Reach out directly:</p>
+                <div class="contact-btns">
+                    <a href="https://wa.me/1234567890" target="_blank" class="contact-btn wa">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                    <a href="mailto:hello@teeninbox.com" class="contact-btn em">
+                        <i class="fa-solid fa-envelope"></i> Email Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="nav-logo">
+                <i class="fa-solid fa-shield-halved nav-logo-icon"></i>
+                <span>TeenInbox</span>
+            </div>
+            <p class="footer-tagline">AI-powered offline protection for every teen.</p>
+            <div class="footer-links">
+                <a href="mailto:hello@teeninbox.com">hello@teeninbox.com</a>
+                <span>·</span>
+                <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
