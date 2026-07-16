@@ -538,4 +538,24 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(el);
         });
     });
+
+    // reveal-stagger observer
+    const staggerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                staggerObserver.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.10 });
+    document.querySelectorAll('.reveal-stagger').forEach(el => staggerObserver.observe(el));
+
+    // Feature card mouse-glow tracking
+    document.querySelectorAll('.feature-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        });
+    });
 });

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO — parent privacy concerns -->
+  <title>Privacy Policy — TeenInbox | Does Not Share Your Child's Messages. Ever.</title>
+  <meta name="description"
+    content="TeenInbox never reads or shares your teen's private messages. All AI runs on-device. Data never leaves the phone by default. Remote sync is parent opt-in only, end-to-end encrypted, and all data auto-deletes every 14 days. Read our full privacy policy.">
+  <meta name="keywords"
+    content="parental control app privacy, does parental monitoring app share data, safe parental control app, teen monitoring app privacy policy, on-device AI parenting app, no data sharing teen safety app, encrypted parental alerts, GDPR parental control, COPPA compliant teen safety app, auto delete teen monitoring data">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://teeninbox.com/privacy-policy.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://teeninbox.com/privacy-policy.html">
+  <meta property="og:title" content="TeenInbox Privacy Policy — Your Child's Messages Stay Private">
+  <meta property="og:description"
+    content="We never read or share your teen's messages. On-device AI only. No data leaves the phone by default. Remote sync is opt-in &amp; encrypted. Everything auto-deletes every 14 days.">
+  <meta property="og:site_name" content="TeenInbox">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TeenInbox Privacy Policy — Your Child's Data Stays On Their Phone">
+  <meta name="twitter:description"
+    content="On-device AI. No data sharing by default. Optional encrypted sync. 14-day auto-deletion. Full privacy policy for TeenInbox parental monitoring app.">
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── Privacy page–specific overrides ── */
+    :root {
+      scroll-behavior: smooth;
+    }
+
+    .pp-hero {
+      padding: 7rem 1.5rem 4rem;
+      text-align: center;
+    }
+
+    .pp-hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff 30%, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .pp-hero .pp-updated {
+      font-size: 0.85rem;
+      color: var(--text-3);
+      margin-bottom: 0;
+    }
+
+    /* ── Layout ── */
+    .pp-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    /* ── TOC card ── */
+    .pp-toc {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-1, rgba(255, 255, 255, 0.1));
+      border-radius: 1.25rem;
+      padding: 1.8rem 2rem;
+      margin-bottom: 3rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .pp-toc h2 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-3, #888);
+      margin: 0 0 1rem;
+    }
+
+    .pp-toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem 1.5rem;
+    }
+
+    @media (max-width: 540px) {
+      .pp-toc ol {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pp-toc li a {
+      color: #a78bfa;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .pp-toc li a:hover {
+      color: #fff;
+    }
+
+    /* ── Privacy badges ── */
+    .pp-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .pp-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-2, #ccc);
+      backdrop-filter: blur(8px);
+    }
+
+    .pp-badge i {
+      font-size: 1rem;
+    }
+
+    .pp-badge.green i {
+      color: #34d399;
+    }
+
+    .pp-badge.purple i {
+      color: #a78bfa;
+    }
+
+    .pp-badge.blue i {
+      color: #60a5fa;
+    }
+
+    .pp-badge.orange i {
+      color: #fb923c;
+    }
+
+    /* ── Section cards ── */
+    .pp-section {
+      margin-bottom: 2.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 1.25rem;
+      padding: 2rem 2.2rem;
+      scroll-margin-top: 100px;
+      transition: border-color 0.3s;
+    }
+
+    .pp-section:hover {
+      border-color: rgba(167, 139, 250, 0.22);
+    }
+
+    .pp-section h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 1.2rem;
+    }
+
+    .pp-section h2 .sec-icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .sec-icon.purple {
+      background: rgba(139, 92, 246, 0.2);
+      color: #a78bfa;
+    }
+
+    .sec-icon.green {
+      background: rgba(52, 211, 153, 0.15);
+      color: #34d399;
+    }
+
+    .sec-icon.blue {
+      background: rgba(96, 165, 250, 0.15);
+      color: #60a5fa;
+    }
+
+    .sec-icon.red {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+    }
+
+    .sec-icon.orange {
+      background: rgba(251, 146, 60, 0.15);
+      color: #fb923c;
+    }
+
+    .sec-icon.teal {
+      background: rgba(45, 212, 191, 0.15);
+      color: #2dd4bf;
+    }
+
+    .sec-icon.pink {
+      background: rgba(244, 114, 182, 0.15);
+      color: #f472b6;
+    }
+
+    .pp-section p,
+    .pp-section li {
+      color: var(--text-2, #c0c0cc);
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+
+    .pp-section ul,
+    .pp-section ol {
+      padding-left: 1.4rem;
+      margin: 0.7rem 0;
+    }
+
+    .pp-section li {
+      margin-bottom: 0.45rem;
+    }
+
+    .pp-section p {
+      margin: 0 0 0.9rem;
+    }
+
+    .pp-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Highlighted callout boxes ── */
+    .callout {
+      border-radius: 0.8rem;
+      padding: 1rem 1.3rem;
+      margin: 1.2rem 0;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+
+    .callout i {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 0.93rem;
+    }
+
+    .callout.info {
+      background: rgba(96, 165, 250, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.25);
+    }
+
+    .callout.info i {
+      color: #60a5fa;
+    }
+
+    .callout.success {
+      background: rgba(52, 211, 153, 0.1);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+    }
+
+    .callout.success i {
+      color: #34d399;
+    }
+
+    .callout.warn {
+      background: rgba(251, 146, 60, 0.1);
+      border: 1px solid rgba(251, 146, 60, 0.25);
+    }
+
+    .callout.warn i {
+      color: #fb923c;
+    }
+
+    /* ── Flow diagram (opt-in remote sync) ── */
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 1.5rem 0;
+    }
+
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .flow-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 1.05rem;
+      top: 2.4rem;
+      bottom: -0.5rem;
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(167, 139, 250, 0.5), transparent);
+    }
+
+    .flow-num {
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      box-shadow: 0 0 12px rgba(139, 92, 246, 0.45);
+    }
+
+    .flow-body {
+      padding-bottom: 1.4rem;
+    }
+
+    .flow-body strong {
+      display: block;
+      color: #fff;
+      font-size: 0.97rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .flow-body span {
+      color: var(--text-2, #bbb);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    /* ── 14-day data cycle pill ── */
+    .cycle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #f87171;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Table ── */
+    .pp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+
+    .pp-table th {
+      text-align: left;
+      color: var(--text-3, #888);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .pp-table td {
+      padding: 0.75rem 0.8rem;
+      color: var(--text-2, #ccc);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: top;
+    }
+
+    .pp-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .tag.on-device {
+      background: rgba(52, 211, 153, 0.15);
+      color: #34d399;
+    }
+
+    .tag.opt-in {
+      background: rgba(251, 146, 60, 0.15);
+      color: #fb923c;
+    }
+
+    .tag.never {
+      background: rgba(239, 68, 68, 0.12);
+      color: #f87171;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 1.3rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .contact-link.email {
+      background: rgba(167, 139, 250, 0.15);
+      border: 1px solid rgba(167, 139, 250, 0.35);
+      color: #c4b5fd;
+    }
+
+    .contact-link.email:hover {
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+    }
+
+    .contact-link.whatsapp {
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      color: #4ade80;
+    }
+
+    .contact-link.whatsapp:hover {
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cinematic Background -->
+  <div id="bg-canvas">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <div class="noise"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" style="text-decoration:none;">
+        <i class="fa-solid fa-shield-halved nav-logo-icon"></i>
+        <span>TeenInbox</span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link-text">Home</a>
+        <a href="index.html#waitlist" class="nav-cta">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="pp-hero">
+    <div class="section-eyebrow" style="justify-content:center; margin-bottom:1rem;">
+      <span class="badge-dot purple"></span>
+      <span>Your Privacy, By Design</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="pp-updated">Effective Date: July 2026 &nbsp;·&nbsp; Last Updated: July 2026</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="pp-wrap">
+
+    <!-- Privacy badges -->
+    <div class="pp-badges">
+      <div class="pp-badge green"><i class="fa-solid fa-microchip"></i> On-Device AI</div>
+      <div class="pp-badge purple"><i class="fa-solid fa-lock"></i> End-to-End Encrypted</div>
+      <div class="pp-badge blue"><i class="fa-solid fa-toggle-off"></i> Remote Sync is Opt-In</div>
+      <div class="pp-badge orange"><i class="fa-solid fa-trash-clock"></i> Auto-Deleted Every 14 Days</div>
+    </div>
+
+    <!-- TOC -->
+    <nav class="pp-toc" aria-label="Table of Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#what-we-collect">What Data We Process</a></li>
+        <li><a href="#on-device">On-Device AI Processing</a></li>
+        <li><a href="#remote-sync">Remote Sync (Opt-In Only)</a></li>
+        <li><a href="#encryption">End-to-End Encryption</a></li>
+        <li><a href="#data-deletion">14-Day Auto-Deletion</a></li>
+        <li><a href="#third-parties">Third Parties</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#rights">Your Rights</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Overview -->
+    <section class="pp-section" id="overview">
+      <h2>
+        <span class="sec-icon purple"><i class="fa-solid fa-shield-halved"></i></span>
+        1. Overview
+      </h2>
+      <p>TeenInbox ("we", "our", "us") is an AI-powered teen safety application. Our mission is to help parents protect
+        their children from online threats — without compromising anyone's privacy. This Privacy Policy explains exactly
+        how our app handles data, what stays on the device, and what (if anything) is ever transmitted.</p>
+      <div class="callout success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p><strong>Privacy-first by design.</strong> All AI inference runs locally on your teen's phone. By default,
+          <em>no personal data — including messages, images, or threat reports — ever leaves the device.</em></p>
+      </div>
+      <p>This policy applies to the TeenInbox mobile application available for Android and iOS, and to our website at <a
+          href="https://teeninbox.com" style="color:#a78bfa;">teeninbox.com</a>.</p>
+    </section>
+
+    <!-- 2. What data -->
+    <section class="pp-section" id="what-we-collect">
+      <h2>
+        <span class="sec-icon blue"><i class="fa-solid fa-database"></i></span>
+        2. What Data We Process
+      </h2>
+      <p>The table below outlines every category of data the app may encounter, and where it is processed:</p>
+
+      <table class="pp-table" aria-label="Data processing summary">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Where Processed</th>
+            <th>Transmitted?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chat messages &amp; text content</td>
+            <td>On-device AI only</td>
+            <td><span class="tag never">Never (default)</span></td>
+          </tr>
+          <tr>
+            <td>Images &amp; media</td>
+            <td>On-device AI only</td>
+            <td><span class="tag never">Never (default)</span></td>
+          </tr>
+          <tr>
+            <td>Threat alerts (metadata only)</td>
+            <td>On-device; optional cloud relay</td>
+            <td><span class="tag opt-in">Opt-in &amp; encrypted</span></td>
+          </tr>
+          <tr>
+            <td>App activity logs</td>
+            <td>On-device storage</td>
+            <td><span class="tag never">Never</span></td>
+          </tr>
+          <tr>
+            <td>Waitlist email &amp; phone</td>
+            <td>Our secure servers</td>
+            <td><span class="tag on-device">Submitted by you</span></td>
+          </tr>
+          <tr>
+            <td>Crash / diagnostic logs</td>
+            <td>Anonymized on-device</td>
+            <td><span class="tag never">Never (identifiable)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3. On-Device AI -->
+    <section class="pp-section" id="on-device">
+      <h2>
+        <span class="sec-icon green"><i class="fa-solid fa-microchip"></i></span>
+        3. On-Device AI Processing
+      </h2>
+      <p>TeenInbox uses a fully on-device machine learning model to analyze text messages, images, and app content in
+        real time. This means:</p>
+      <ul>
+        <li>The AI model runs entirely within the teen's phone — no internet connection is required for threat
+          detection.</li>
+        <li>Messages and media are never uploaded to any server for analysis.</li>
+        <li>The AI processes data in memory and immediately discards it after analysis; nothing is written to disk
+          beyond a minimal threat log (stored only on-device).</li>
+        <li>Parents receive alerts derived from the AI's verdict — not the raw content of conversations.</li>
+      </ul>
+      <div class="callout info">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>Think of it like having a security guard who watches but never writes down or shares what people say — they
+          only raise a flag if something dangerous happens.</p>
+      </div>
+    </section>
+
+    <!-- 4. Remote Sync -->
+    <section class="pp-section" id="remote-sync">
+      <h2>
+        <span class="sec-icon orange"><i class="fa-solid fa-toggle-off"></i></span>
+        4. Remote Sync (Opt-In Only)
+      </h2>
+      <p>By default, <strong>Remote Sync is disabled</strong>. All threat alerts are stored only on the teen's device
+        and are viewable only from the Parent Dashboard app installed on the same account.</p>
+
+      <div class="callout warn">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>Remote Sync must be <strong>explicitly enabled by the parent</strong> in the TeenInbox settings. It is turned
+          <strong>OFF</strong> by default and will never activate without your consent.</p>
+      </div>
+
+      <p>When Remote Sync is enabled:</p>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-body">
+            <strong>Threat Detected On-Device</strong>
+            <span>The on-device AI detects a potential threat (e.g., blackmail, explicit content, grooming
+              language).</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-body">
+            <strong>Secure Alert Packaged Locally</strong>
+            <span>A privacy-preserving alert packet is assembled on the teen's device — containing only the threat
+              category, risk level, app name, message and timestamp. No images is ever included.</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-body">
+            <strong>End-to-End Encrypted</strong>
+            <span>The alert is encrypted using keys only your family's devices hold. Our servers cannot read the
+              alert.</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-body">
+            <strong>Delivered to Parent Dashboard</strong>
+            <span>The encrypted alert is relayed through our infrastructure and decrypted only on the parent's device.
+              You get an instant push notification.</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">5</div>
+          <div class="flow-body">
+            <strong>Auto-Deleted in 14 Days</strong>
+            <span>Both the on-device log and any relayed alert data are automatically and irreversibly deleted after 14
+              days — even if you forget to delete them manually.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Encryption -->
+    <section class="pp-section" id="encryption">
+      <h2>
+        <span class="sec-icon purple"><i class="fa-solid fa-lock"></i></span>
+        5. End-to-End Encryption
+      </h2>
+      <p>When Remote Sync is enabled, all alert data is protected by end-to-end encryption (E2EE):</p>
+      <ul>
+        <li><strong>Key Generation:</strong> Encryption keys are generated and stored exclusively on your family's
+          devices — on the teen's phone and the parent's phone.</li>
+        <li><strong>Zero-Knowledge Relay:</strong> Our servers act only as an encrypted relay. We hold no decryption
+          keys and cannot read the content of any alert, even if compelled by law.</li>
+        <li><strong>Forward Secrecy:</strong> New encryption keys are derived for each session, so past communications
+          cannot be decrypted even if future keys are ever compromised.</li>
+        <li><strong>Transport Security:</strong> All data in transit is additionally protected with TLS 1.3.</li>
+      </ul>
+      <div class="callout success">
+        <i class="fa-solid fa-shield-check"></i>
+        <p>TeenInbox never sees the content of what your teen is doing. We only relay a locked envelope — and only you
+          have the key.</p>
+      </div>
+    </section>
+
+    <!-- 6. 14-day deletion -->
+    <section class="pp-section" id="data-deletion">
+      <h2>
+        <span class="sec-icon red"><i class="fa-solid fa-trash-clock"></i></span>
+        6. Automatic 14-Day Data Deletion
+      </h2>
+      <div class="cycle-pill">
+        <i class="fa-solid fa-rotate"></i> 14-Day Rolling Deletion Cycle
+      </div>
+      <p>All data generated by TeenInbox — both on the teen's device and any encrypted alerts relayed to our servers —
+        is automatically and permanently deleted every 14 days.</p>
+      <p>This means:</p>
+      <ul>
+        <li>On-device threat logs older than 14 days are wiped automatically, even if the app is not open.</li>
+        <li>Any encrypted alert packets stored on our relay infrastructure are deleted on a 14-day rolling schedule.
+        </li>
+        <li>Deleted data cannot be recovered — not by us, not by you, and not by any third party.</li>
+        <li>You may also trigger an immediate manual deletion at any time from the Parent Dashboard settings.</li>
+      </ul>
+      <div class="callout info">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>The 14-day window is designed to give parents enough time to review and act on alerts, while ensuring data
+          doesn't accumulate over time and create long-term privacy risks.</p>
+      </div>
+    </section>
+
+    <!-- 7. Third Parties -->
+    <section class="pp-section" id="third-parties">
+      <h2>
+        <span class="sec-icon teal"><i class="fa-solid fa-handshake-slash"></i></span>
+        7. Third Parties & Data Sharing
+      </h2>
+      <p>We do not sell, rent, or trade any personal data. Period.</p>
+      <ul>
+        <li><strong>No advertising networks.</strong> We do not integrate any ad SDKs or third-party trackers.</li>
+        <li><strong>No analytics on communication content.</strong> We never analyse the content of your teen's messages
+          or the alerts you receive.</li>
+        <li><strong>Limited infrastructure providers.</strong> We use trusted cloud infrastructure solely as an
+          encrypted relay (when Remote Sync is enabled). These providers have no access to your data — all data is
+          encrypted before it leaves your device.</li>
+        <li><strong>Legal obligations.</strong> We may disclose account-level information (e.g., a registered email
+          address) if required by a valid court order — but because we hold no decryption keys, we cannot produce the
+          content of alerts or conversations even if ordered to do so.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Children -->
+    <section class="pp-section" id="children">
+      <h2>
+        <span class="sec-icon pink"><i class="fa-solid fa-child"></i></span>
+        8. Children's Privacy
+      </h2>
+      <p>TeenInbox is specifically designed to protect teenagers. We take their privacy just as seriously as their
+        safety.</p>
+      <ul>
+        <li>The app does not collect any personal information from the teen directly (no name, email, or account
+          registration is required on the teen's device).</li>
+        <li>TeenInbox never reads, stores, or transmits the actual content of your teen's private messages by default —
+          only an AI verdict is generated on the device.</li>
+        <li>The Parent Dashboard account is held by the parent or legal guardian, not the child.</li>
+      </ul>
+    </section>
+
+    <!-- 9. Rights -->
+    <section class="pp-section" id="rights">
+      <h2>
+        <span class="sec-icon blue"><i class="fa-solid fa-user-shield"></i></span>
+        9. Your Rights
+      </h2>
+      <p>Depending on your location, you may have the following rights regarding your data:</p>
+      <ul>
+        <li><strong>Right to Access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Right to Erasure:</strong> Request deletion of your data (waitlist information, account data). Note:
+          on-device and relay data is automatically deleted every 14 days regardless.</li>
+        <li><strong>Right to Rectification:</strong> Correct any inaccurate data we hold.</li>
+        <li><strong>Right to Portability:</strong> Receive your data in a portable format.</li>
+        <li><strong>Right to Object:</strong> Object to any processing of your data.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Disable Remote Sync at any time from the app settings — data
+          sync stops immediately.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at the details below. We will respond within 30 days.</p>
+    </section>
+
+    <!-- 10. Contact -->
+    <section class="pp-section" id="contact">
+      <h2>
+        <span class="sec-icon green"><i class="fa-solid fa-envelope"></i></span>
+        10. Contact Us
+      </h2>
+      <p>If you have any questions about this Privacy Policy, wish to exercise your rights, or need to report a concern,
+        please reach out:</p>
+      <div class="contact-card">
+        <a href="mailto:hello@teeninbox.com" class="contact-link email">
+          <i class="fa-solid fa-envelope"></i> hello@teeninbox.com
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" class="contact-link whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+      <p style="margin-top:1.4rem; font-size:0.88rem; color:var(--text-3);">
+        We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the
+        top of this page. Significant changes will be communicated to you via the app or email.
+      </p>
+    </section>
+
+  </div><!-- /pp-wrap -->
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="nav-logo" style="justify-content:center;">
+        <i class="fa-solid fa-shield-halved nav-logo-icon"></i>
+        <span>TeenInbox</span>
+      </div>
+      <p class="footer-tagline">AI-powered offline protection for every teen.</p>
+      <div class="footer-links">
+        <a href="mailto:hello@teeninbox.com">hello@teeninbox.com</a>
+        <span>·</span>
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <span>·</span>
+        <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> TeenInbox. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
