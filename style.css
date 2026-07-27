@@ -1075,3 +1075,13 @@ section { position: relative; z-index: 1; }
     .waitlist-card { padding: 1.75rem; }
     .hero-trust { gap: 1.25rem; }
 }
+@media (max-width: 400px) {
+    #navbar { padding: 0 1rem; }
+    .nav-logo { font-size: 1.15rem; }
+    .nav-cta { padding: 0.45rem 1rem; font-size: 0.8rem; }
+    .hero-title { font-size: 2rem; }
+    .hero-ctas { width: 100%; padding: 0 1rem; }
+    .pp-hero h1 { font-size: 2rem; }
+    .pp-section { padding: 1.5rem 1.2rem; }
+    .contact-btn { width: 100%; justify-content: center; }
+}

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#04000d">
 
   <!-- Primary SEO — parent privacy concerns -->
   <title>Privacy Policy — TeenInbox | Does Not Share Your Child's Messages. Ever.</title>
@@ -537,6 +538,7 @@
         <li><a href="#third-parties">Third Parties</a></li>
         <li><a href="#children">Children's Privacy</a></li>
         <li><a href="#rights">Your Rights</a></li>
+        <li><a href="#account-deletion">Account &amp; Data Deletion</a></li>
         <li><a href="#contact">Contact Us</a></li>
       </ol>
     </nav>
@@ -553,10 +555,11 @@
       <div class="callout success">
         <i class="fa-solid fa-circle-check"></i>
         <p><strong>Privacy-first by design.</strong> All AI inference runs locally on your teen's phone. By default,
-          <em>no personal data — including messages, images, or threat reports — ever leaves the device.</em></p>
+          <em>no personal data — including messages, images, or threat reports — ever leaves the device.</em>
+        </p>
       </div>
       <p>This policy applies to the TeenInbox mobile application available for Android and iOS, and to our website at <a
-          href="https://teeninbox.com" style="color:#a78bfa;">teeninbox.com</a>.</p>
+          href="https://teeninbox.com" rel="noopener noreferrer" style="color:#a78bfa;">teeninbox.com</a>.</p>
     </section>
 
     <!-- 2. What data -->
@@ -645,7 +648,8 @@
       <div class="callout warn">
         <i class="fa-solid fa-triangle-exclamation"></i>
         <p>Remote Sync must be <strong>explicitly enabled by the parent</strong> in the TeenInbox settings. It is turned
-          <strong>OFF</strong> by default and will never activate without your consent.</p>
+          <strong>OFF</strong> by default and will never activate without your consent.
+        </p>
       </div>
 
       <p>When Remote Sync is enabled:</p>
@@ -799,19 +803,105 @@
       <p>To exercise any of these rights, contact us at the details below. We will respond within 30 days.</p>
     </section>
 
-    <!-- 10. Contact -->
+    <!-- 10. Account Deletion -->
+    <section class="pp-section" id="account-deletion">
+      <h2>
+        <span class="sec-icon red"><i class="fa-solid fa-user-xmark"></i></span>
+        10. Account &amp; Data Deletion
+      </h2>
+      <p>We believe you should have full control over your data — including the right to delete it completely. Here is
+        exactly what happens when you uninstall the app or request account deletion.</p>
+
+      <div class="callout warn">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p><strong>Uninstalling the app permanently deletes all on-device data.</strong> This action is immediate and
+          irreversible — no backup of local data is retained by TeenInbox.</p>
+      </div>
+
+      <h3 style="color:#fff; font-size:1rem; font-weight:700; margin:1.4rem 0 0.6rem;">What happens when you uninstall
+        TeenInbox:</h3>
+      <ul>
+        <li><strong>All on-device data is deleted immediately</strong> — including the local threat log, AI model cache,
+          app preferences, and any locally stored alert history.</li>
+        <li><strong>No data is recoverable</strong> after uninstall. We do not keep a backup of any locally held
+          information.</li>
+        <li><strong>Remote Sync is automatically suspended</strong> — no further encrypted alert packets will be relayed
+          to our servers once the app is removed.</li>
+      </ul>
+
+      <h3 style="color:#fff; font-size:1rem; font-weight:700; margin:1.4rem 0 0.6rem;">What happens to data on our
+        servers:</h3>
+      <div class="cycle-pill"><i class="fa-solid fa-rotate"></i> Automatic 14-Day Server Purge</div>
+      <ul>
+        <li>Any encrypted alert packets that were previously relayed to our servers (when Remote Sync was enabled) are
+          <strong>automatically and permanently deleted every 14 days</strong> on a rolling schedule.
+        </li>
+        <li>You do not need to take any action — server-side purge is fully automated and cannot be paused or reversed
+          by us.</li>
+        <li>Because all relay data is end-to-end encrypted and keys exist only on your devices, even the encrypted
+          remnants are unreadable to us at all times prior to deletion.</li>
+      </ul>
+
+      <div class="flow" style="margin-top:1.5rem;">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-body">
+            <strong>You Uninstall the App</strong>
+            <span>All on-device data — threat logs, model cache, app settings — is deleted immediately and permanently
+              by your device's operating system.</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-body">
+            <strong>Remote Sync Stops</strong>
+            <span>No new encrypted alerts are sent to our servers. Any pending sync is cancelled the moment the app is
+              removed.</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-body">
+            <strong>Server Data Auto-Purged Within 14 Days</strong>
+            <span>Any encrypted relay data still on our infrastructure is automatically and irreversibly deleted within
+              the 14-day rolling window — even without any action on your part.</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-body">
+            <strong>Nothing Remains</strong>
+            <span>After the 14-day purge completes, no data — on-device or server-side — relating to your account exists
+              anywhere in TeenInbox's systems.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>You never need to contact us to delete your data. <strong>Uninstalling the app removes all local data
+            instantly</strong>, and all encrypted server-side data is automatically purged within 14 days — no request
+          needed.</p>
+      </div>
+
+      <p>If you wish to request immediate deletion of any server-held data before the 14-day cycle completes, you may
+        contact us at <a href="mailto:contact@safescroll.app" style="color:#a78bfa;">contact@safescroll.app</a> and we
+        will manually purge your records within 72 hours.</p>
+    </section>
+
+    <!-- 11. Contact -->
     <section class="pp-section" id="contact">
       <h2>
         <span class="sec-icon green"><i class="fa-solid fa-envelope"></i></span>
-        10. Contact Us
+        11. Contact Us
       </h2>
       <p>If you have any questions about this Privacy Policy, wish to exercise your rights, or need to report a concern,
         please reach out:</p>
       <div class="contact-card">
-        <a href="mailto:hello@teeninbox.com" class="contact-link email">
-          <i class="fa-solid fa-envelope"></i> hello@teeninbox.com
+        <a href="mailto:contact@safescroll.app" class="contact-link email">
+          <i class="fa-solid fa-envelope"></i> contact@safescroll.app
         </a>
-        <a href="https://wa.me/1234567890" target="_blank" class="contact-link whatsapp">
+        <a href="https://wa.me/9363717887" target="_blank" class="contact-link whatsapp">
           <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
         </a>
       </div>
@@ -832,9 +922,9 @@
       </div>
       <p class="footer-tagline">AI-powered offline protection for every teen.</p>
       <div class="footer-links">
-        <a href="mailto:hello@teeninbox.com">hello@teeninbox.com</a>
+        <a href="mailto:contact@safescroll.app">contact@safescroll.app</a>
         <span>·</span>
-        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        <a href="https://wa.me/9363717887" target="_blank">WhatsApp</a>
         <span>·</span>
         <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
       </div>

@@ -150,6 +150,8 @@ function createImageBubble() {
     const div = document.createElement('div');
     div.className = 'img-bubble';
     div.id = 'img-bubble-main';
+    div.setAttribute('role', 'img');
+    div.setAttribute('aria-label', 'Explicit image blocked by TeenInbox');
     // Use the AI-generated blurred/censored image asset (included in project)
     div.style.backgroundImage = "url('explicit_blocked.png')";
     div.style.backgroundSize = 'cover';
