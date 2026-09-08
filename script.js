@@ -534,7 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add reveal to sections on init
-    document.querySelectorAll('#apps, #features, #waitlist').forEach(sec => {
+    document.querySelectorAll('#apps, #features, #download').forEach(sec => {
         sec.querySelectorAll('.section-eyebrow, .section-title, .section-sub, .feature-card, .waitlist-card, .contact-strip').forEach(el => {
             el.classList.add('reveal');
             observer.observe(el);
