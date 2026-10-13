@@ -150,6 +150,7 @@ body {
     filter: drop-shadow(0 0 10px rgba(139,92,246,0.5));
 }
 .nav-cta {
+    display: inline-flex; align-items: center; gap: 0.45rem;
     padding: 0.55rem 1.4rem; border-radius: 50px;
     background: linear-gradient(135deg, var(--purple), var(--fuchsia));
     color: #fff; font-weight: 700; font-size: 0.875rem;
