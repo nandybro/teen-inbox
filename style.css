@@ -149,6 +149,26 @@ body {
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 10px rgba(139,92,246,0.5));
 }
+.nav-actions {
+    display: flex; align-items: center; gap: 0.75rem;
+}
+.nav-ios-cta {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.48rem 1.15rem; border-radius: 50px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #fff; font-weight: 600; font-size: 0.85rem;
+    text-decoration: none; transition: var(--transition);
+    backdrop-filter: blur(10px); cursor: pointer;
+}
+.nav-ios-cta i { font-size: 0.95rem; }
+.nav-ios-cta:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 18px rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
 .nav-cta {
     display: inline-flex; align-items: center; gap: 0.45rem;
     padding: 0.55rem 1.4rem; border-radius: 50px;
@@ -267,6 +287,38 @@ section { position: relative; z-index: 1; }
     border-color: var(--border-3);
 }
 
+.btn-apple-main {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    padding: 0.95rem 1.85rem; border-radius: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #fff; font-family: 'Outfit', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    text-decoration: none; transition: var(--transition);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    cursor: pointer; position: relative;
+}
+.btn-apple-main i.fa-apple {
+    font-size: 1.35rem; color: #fff;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35));
+}
+.btn-apple-main:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.14), 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.btn-apple-main:active { transform: translateY(-1px) scale(0.99); }
+.btn-apple-badge {
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; padding: 0.2rem 0.55rem; border-radius: 50px;
+    background: rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    color: #e9d5ff;
+}
+
 /* ============================================================
    HERO
 ============================================================ */
@@ -308,8 +360,28 @@ section { position: relative; z-index: 1; }
 .hero-sub strong { color: var(--text-2); font-weight: 600; }
 .hero-ctas {
     display: flex; gap: 1rem; justify-content: center;
-    flex-wrap: wrap; margin-bottom: 2.25rem;
+    flex-wrap: wrap; margin-bottom: 1.25rem;
 }
+.hero-cta-meta {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0.85rem; margin-top: -0.25rem; margin-bottom: 2.25rem;
+    font-size: 0.86rem; color: var(--text-3); flex-wrap: wrap;
+}
+.hero-demo-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--text-2); text-decoration: none;
+    transition: color 0.2s, transform 0.2s; font-weight: 500;
+}
+.hero-demo-link:hover { color: #fff; transform: translateY(-1px); }
+.hero-meta-dot { color: var(--border-2); }
+.hero-ios-notice {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--violet); font-weight: 500; cursor: pointer;
+    text-decoration: none; transition: color 0.2s;
+}
+.hero-ios-notice:hover { color: #fff; }
+.hero-ios-notice i { color: #fff; }
+.hero-ios-notice strong { color: #fff; }
 .hero-trust {
     display: flex; gap: 2rem; justify-content: center;
     flex-wrap: wrap;
@@ -1052,6 +1124,58 @@ section { position: relative; z-index: 1; }
 .reveal-stagger.visible > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.40s; }
 
 /* ============================================================
+   IOS WAITLIST MODAL
+============================================================ */
+.ios-modal-backdrop {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(4, 0, 13, 0.82);
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.25rem; opacity: 0; visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.ios-modal-backdrop.active { opacity: 1; visibility: visible; }
+.ios-modal-box {
+    background: linear-gradient(145deg, rgba(28, 16, 52, 0.98), rgba(12, 6, 26, 0.99));
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8), 0 0 60px rgba(168, 85, 247, 0.2);
+    border-radius: 1.5rem; max-width: 460px; width: 100%;
+    padding: 2.2rem 2rem 2rem; position: relative;
+    transform: scale(0.92) translateY(10px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ios-modal-backdrop.active .ios-modal-box { transform: scale(1) translateY(0); }
+.ios-modal-close {
+    position: absolute; top: 1rem; right: 1.25rem;
+    background: transparent; border: none; color: var(--text-2);
+    font-size: 1.75rem; line-height: 1; cursor: pointer;
+    transition: color 0.2s, transform 0.2s; padding: 0.25rem 0.5rem;
+}
+.ios-modal-close:hover { color: #fff; transform: scale(1.15); }
+.ios-modal-icon {
+    width: 58px; height: 58px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.25rem; font-size: 1.75rem; color: #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+.ios-modal-header { text-align: center; margin-bottom: 1.5rem; }
+.ios-modal-header h3 {
+    font-family: 'Outfit', sans-serif; font-size: 1.45rem;
+    font-weight: 800; color: #fff; margin-bottom: 0.5rem;
+}
+.ios-modal-header p {
+    font-size: 0.9rem; color: var(--text-2); line-height: 1.55; margin: 0;
+}
+.modal-scroll-link {
+    display: block; text-align: center; margin-top: 1rem;
+    font-size: 0.85rem; color: var(--text-3); text-decoration: underline;
+    transition: color 0.2s; cursor: pointer;
+}
+.modal-scroll-link:hover { color: #fff; }
+
+/* ============================================================
    RESPONSIVE
 ============================================================ */
 @media (max-width: 900px) {
@@ -1070,16 +1194,22 @@ section { position: relative; z-index: 1; }
     .parent-device-wrapper { order: 3; }
     #hero { padding: 100px 1.25rem 60px; }
     .hero-ctas { flex-direction: column; align-items: center; }
-    .btn-primary-main, .btn-ghost { width: 100%; justify-content: center; }
+    .btn-primary-main, .btn-apple-main, .btn-ghost { width: 100%; justify-content: center; }
     .features-grid { gap: 1rem; }
     .feature-card { padding: 1.75rem; }
     .waitlist-card { padding: 1.75rem; }
     .hero-trust { gap: 1.25rem; }
 }
+@media (max-width: 480px) {
+    .nav-actions .nav-link-text { display: none; }
+    .nav-ios-cta { padding: 0.42rem 0.8rem; font-size: 0.78rem; }
+    .nav-cta { padding: 0.42rem 0.9rem; font-size: 0.78rem; }
+    .hero-cta-meta { flex-direction: column; gap: 0.45rem; }
+    .hero-meta-dot { display: none; }
+}
 @media (max-width: 400px) {
-    #navbar { padding: 0 1rem; }
+    #navbar { padding: 0 0.8rem; }
     .nav-logo { font-size: 1.15rem; }
-    .nav-cta { padding: 0.45rem 1rem; font-size: 0.8rem; }
     .hero-title { font-size: 2rem; }
     .hero-ctas { width: 100%; padding: 0 1rem; }
     .pp-hero h1 { font-size: 2rem; }

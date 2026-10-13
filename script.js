@@ -474,7 +474,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Waitlist form
+    // Shared submit function
+    function submitWaitlist(email, phone, submitBtn, onDone, onError) {
+        const origText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Securing your spot...';
+        submitBtn.disabled = true;
+
+        fetch('https://script.google.com/macros/s/AKfycbyznv7coa1iXhK3BQbD2I0mDoCtjPa04RAHvLenftPnjTcw9nPfcLQUXHJW9P9olb7K/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({ email: email, phone: phone })
+        })
+        .then(() => {
+            onDone();
+        })
+        .catch(error => {
+            console.error('Error submitting form', error);
+            submitBtn.innerHTML = origText;
+            submitBtn.disabled = false;
+            if (onError) onError();
+            else alert('Something went wrong. Please try again.');
+        });
+    }
+
+    // Bottom Waitlist form
     const form = el('waitlist-form');
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -486,29 +509,114 @@ document.addEventListener('DOMContentLoaded', () => {
             const wrap = el('waitlist-form-wrap');
             const success = el('waitlist-success');
             const submitBtn = form.querySelector('.btn-submit-main');
-            const origText = submitBtn.innerHTML;
 
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Securing your spot...';
-            submitBtn.disabled = true;
-
-            fetch('https://script.google.com/macros/s/AKfycbyznv7coa1iXhK3BQbD2I0mDoCtjPa04RAHvLenftPnjTcw9nPfcLQUXHJW9P9olb7K/exec', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'text/plain;charset=utf-8',
-                },
-                body: JSON.stringify({ email: email, phone: phone })
-            })
-            .then(() => {
+            submitWaitlist(email, phone, submitBtn, () => {
                 wrap.classList.add('d-none');
                 success.classList.remove('d-none');
-            })
-            .catch(error => {
-                console.error('Error submitting form', error);
-                submitBtn.innerHTML = origText;
-                submitBtn.disabled = false;
-                alert('Something went wrong. Please try again.');
+
+                // Also sync modal if present
+                const modalForm = el('modal-waitlist-form');
+                const modalSuccess = el('modal-waitlist-success');
+                if (modalForm && modalSuccess) {
+                    modalForm.classList.add('d-none');
+                    modalSuccess.classList.remove('d-none');
+                }
             });
         });
+    }
+
+    // Modal waitlist form
+    const modalForm = el('modal-waitlist-form');
+    if (modalForm) {
+        modalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = el('modal-wl-email').value;
+            const phone = el('modal-wl-phone').value;
+            if (!email || !phone) return;
+
+            const submitBtn = modalForm.querySelector('.btn-submit-main');
+
+            submitWaitlist(email, phone, submitBtn, () => {
+                modalForm.classList.add('d-none');
+                el('modal-waitlist-success').classList.remove('d-none');
+
+                // Also sync bottom form
+                const bottomWrap = el('waitlist-form-wrap');
+                const bottomSuccess = el('waitlist-success');
+                if (bottomWrap && bottomSuccess) {
+                    bottomWrap.classList.add('d-none');
+                    bottomSuccess.classList.remove('d-none');
+                }
+            });
+        });
+    }
+
+    // Modal handlers
+    const modal = el('ios-modal');
+    function openIosModal() {
+        if (!modal) return;
+        modal.classList.remove('d-none');
+        requestAnimationFrame(() => {
+            modal.classList.add('active');
+            const emailInput = el('modal-wl-email');
+            if (emailInput) emailInput.focus();
+        });
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeIosModal() {
+        if (!modal) return;
+        modal.classList.remove('active');
+        setTimeout(() => {
+            modal.classList.add('d-none');
+            document.body.style.overflow = '';
+        }, 250);
+    }
+
+    document.querySelectorAll('.open-waitlist-modal').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openIosModal();
+        });
+    });
+
+    const modalCloseBtn = el('ios-modal-close');
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeIosModal);
+
+    const modalDoneBtn = el('modal-success-done');
+    if (modalDoneBtn) modalDoneBtn.addEventListener('click', closeIosModal);
+
+    const modalScrollLink = el('modal-scroll-link');
+    if (modalScrollLink) {
+        modalScrollLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeIosModal();
+            setTimeout(() => {
+                const target = el('ios-waitlist') || el('download');
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }, 260);
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeIosModal();
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeIosModal();
+        }
+    });
+
+    // Auto-highlight iOS for Apple users
+    const isAppleDevice = /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && !/Android/.test(navigator.userAgent);
+    if (isAppleDevice) {
+        const heroIosBtn = el('hero-ios-btn');
+        if (heroIosBtn) {
+            heroIosBtn.classList.add('pulse-cta');
+        }
     }
 
     // Scroll reveal

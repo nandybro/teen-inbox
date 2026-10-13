@@ -237,6 +237,7 @@
                 <span>TeenInbox</span>
             </div>
             <div class="nav-actions">
+                <a href="#download" class="nav-ios-cta open-waitlist-modal"><i class="fa-brands fa-apple"></i> <span>iOS Waitlist</span></a>
                 <a href="privacy-policy.html" class="nav-link-text">Privacy</a>
                 <a href="https://play.google.com/store/apps/details?id=com.teeninbox.chat.message.monitor&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="nav-cta"><i class="fa-brands fa-google-play"></i> Get the App</a>
             </div>
@@ -322,14 +323,27 @@
             <div class="hero-ctas">
                 <a href="https://play.google.com/store/apps/details?id=com.teeninbox.chat.message.monitor&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="btn-primary-main pulse-cta">
                     <i class="fa-brands fa-google-play"></i>
-                    Get on Google Play
+                    <span>Get on Google Play</span>
                 </a>
-                <a href="#demo" class="btn-ghost">
-                    <i class="fa-regular fa-circle-play"></i>
-                    See It In Action
+                <a href="#download" class="btn-apple-main open-waitlist-modal" id="hero-ios-btn">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>Join iOS Waitlist</span>
+                    <span class="btn-apple-badge">Free</span>
                 </a>
             </div>
-            <a href="#download" class="hero-ios-link" style="color: var(--text-3); font-size: 0.85rem; margin-top: -1.2rem; margin-bottom: 2rem; text-decoration: underline; transition: color 0.2s;">Looking for iOS? Join waitlist</a>
+
+            <!-- Demo link & platform indicator -->
+            <div class="hero-cta-meta">
+                <a href="#demo" class="hero-demo-link">
+                    <i class="fa-regular fa-circle-play"></i>
+                    <span>See AI Threat Demo</span>
+                </a>
+                <span class="hero-meta-dot">·</span>
+                <a href="#download" class="hero-ios-notice open-waitlist-modal">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>iOS Launching Soon — <strong>Join Parent Waitlist &rarr;</strong></span>
+                </a>
+            </div>
 
             <!-- Trust pills -->
             <div class="hero-trust">
@@ -575,7 +589,7 @@
                 </a>
             </div>
 
-            <div class="waitlist-card">
+            <div class="waitlist-card" id="ios-waitlist">
                 <div id="waitlist-form-wrap">
                     <h3 style="margin-bottom: 1.5rem; text-align: center; color: #fff;">Join the iOS Waitlist</h3>
                     <form id="waitlist-form">
@@ -644,6 +658,49 @@
             <p class="footer-copy">&copy; <span id="footer-year"></span> TeenInbox. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- ============================================================
+     IOS WAITLIST MODAL
+============================================================ -->
+    <div id="ios-modal" class="ios-modal-backdrop d-none" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ios-modal-title">
+        <div class="ios-modal-box">
+            <button type="button" class="ios-modal-close" id="ios-modal-close" aria-label="Close modal">&times;</button>
+            <div class="ios-modal-header">
+                <div class="ios-modal-icon">
+                    <i class="fa-brands fa-apple"></i>
+                </div>
+                <h3 id="ios-modal-title">Join the iOS Waitlist</h3>
+                <p>Be the first to protect your teen when TeenInbox launches on iPhone. Early access is 100% free.</p>
+            </div>
+            
+            <form id="modal-waitlist-form">
+                <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                    <label for="modal-wl-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="modal-wl-email" placeholder="parent@example.com" required>
+                </div>
+                <div class="form-group" style="text-align: left; margin-bottom: 1.5rem;">
+                    <label for="modal-wl-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                    <input type="tel" id="modal-wl-phone" placeholder="+1 (555) 000-0000" required>
+                </div>
+                <button type="submit" class="btn-primary-main btn-submit-main" style="width: 100%; justify-content: center;">
+                    <i class="fa-brands fa-apple"></i>
+                    Secure My iOS Spot — It's Free
+                </button>
+                <p class="form-disclaimer" style="margin-top: 0.75rem; text-align: center;">No spam. No credit card. Just an alert when the iOS app launches.</p>
+                <a href="#download" class="modal-scroll-link" id="modal-scroll-link">Or view full app features below &darr;</a>
+            </form>
+
+            <div id="modal-waitlist-success" class="d-none" style="text-align: center; padding: 1.5rem 0;">
+                <div class="success-animation">
+                    <div class="success-ring"></div>
+                    <i class="fa-solid fa-shield-check success-icon-main"></i>
+                </div>
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">You're on the iOS Waitlist!</h3>
+                <p style="color: var(--text-2); font-size: 0.95rem;">We'll notify you first the moment TeenInbox is available on the App Store.</p>
+                <button type="button" class="btn-ghost" id="modal-success-done" style="margin-top: 1.25rem;">Done</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
